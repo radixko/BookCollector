@@ -13,6 +13,8 @@
 		688A22621FB9E2800055401C /* BookCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 688A22601FB9E2800055401C /* BookCollector.xcdatamodeld */; };
 		688A22641FB9E2800055401C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688A22631FB9E2800055401C /* Assets.xcassets */; };
 		688A22671FB9E2800055401C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688A22651FB9E2800055401C /* LaunchScreen.storyboard */; };
+		688A226F1FB9EA060055401C /* book.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 688A226E1FB9EA060055401C /* book.jpeg */; };
+		688A22711FB9EBFD0055401C /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688A22701FB9EBFD0055401C /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		688A22631FB9E2800055401C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688A22661FB9E2800055401C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688A22681FB9E2800055401C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688A226E1FB9EA060055401C /* book.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpeg; sourceTree = "<group>"; };
+		688A22701FB9EBFD0055401C /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		688A22581FB9E2800055401C /* BookCollector */ = {
 			isa = PBXGroup;
 			children = (
+				688A226E1FB9EA060055401C /* book.jpeg */,
 				688A22591FB9E2800055401C /* AppDelegate.swift */,
 				688A225B1FB9E2800055401C /* ViewController.swift */,
 				688A225D1FB9E2800055401C /* Main.storyboard */,
+				688A22701FB9EBFD0055401C /* BookViewController.swift */,
 				688A22631FB9E2800055401C /* Assets.xcassets */,
 				688A22651FB9E2800055401C /* LaunchScreen.storyboard */,
 				688A22681FB9E2800055401C /* Info.plist */,
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688A226F1FB9EA060055401C /* book.jpeg in Resources */,
 				688A22671FB9E2800055401C /* LaunchScreen.storyboard in Resources */,
 				688A22641FB9E2800055401C /* Assets.xcassets in Resources */,
 				688A225F1FB9E2800055401C /* Main.storyboard in Resources */,
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				688A225C1FB9E2800055401C /* ViewController.swift in Sources */,
+				688A22711FB9EBFD0055401C /* BookViewController.swift in Sources */,
 				688A225A1FB9E2800055401C /* AppDelegate.swift in Sources */,
 				688A22621FB9E2800055401C /* BookCollector.xcdatamodeld in Sources */,
 			);
@@ -281,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LH3ZH362W;
 				INFOPLIST_FILE = BookCollector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.radoslav.BookCollector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LH3ZH362W;
 				INFOPLIST_FILE = BookCollector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.radoslav.BookCollector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
