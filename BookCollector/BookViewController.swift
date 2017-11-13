@@ -26,12 +26,24 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        bookImageView.image = image
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func cameraButton(_ sender: Any) {
         imagePicker.sourceType = .camera
         
-        present(imagePicker, animated: true, completion: nil)
+        
     }
     
     @IBAction func addBookButton(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let game = Book(context: context)
+        game.title = titleTextField.text
+        game.image = UIImagePNGRepresentation(bookImageView.image!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
     }
 }

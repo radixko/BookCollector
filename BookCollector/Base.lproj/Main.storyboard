@@ -14,11 +14,25 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BookCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="BookCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BMb-G6-Bgl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BMb-G6-Bgl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1fR-jo-tVr"/>
+                            <constraint firstItem="BMb-G6-Bgl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OKJ-KC-9XI"/>
+                            <constraint firstItem="BMb-G6-Bgl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U0c-3b-fhf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BMb-G6-Bgl" secondAttribute="bottom" id="aTC-LT-f6i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BMb-G6-Bgl" secondAttribute="trailing" id="kco-gr-IKJ"/>
+                            <constraint firstItem="BMb-G6-Bgl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v7X-ru-xta"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ojf-is-w7j">
@@ -28,6 +42,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BMb-G6-Bgl" id="BT7-xZ-aMy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
