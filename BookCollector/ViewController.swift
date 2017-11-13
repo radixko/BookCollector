@@ -28,7 +28,18 @@ class ViewController: UIViewController, UITableViewDataSource , UITableViewDeleg
         let cell = UITableViewCell()
         let book = books[indexPath.row]
         cell.textLabel?.text = book.title
+        cell.imageView?.image = UIImage(data: book.image as! Data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = books[indexPath.row]
+        performSegue(withIdentifier: "bookSeque", sender: book)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! BookViewController
+        nextVC.book = sender as? Book
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource , UITableViewDeleg
             print(books)
         }catch{
         }
+        tableView.reloadData()
     }
 }
 

@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="Ojf-is-w7j">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zd0-qj-lbw">
                             <connections>
-                                <segue destination="Y8g-eQ-pp8" kind="show" id="kVk-CN-8b0"/>
+                                <segue destination="Y8g-eQ-pp8" kind="show" identifier="bookSeque" id="kVk-CN-8b0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -74,11 +74,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nj-L2-o0g">
                                 <rect key="frame" x="162.5" y="309" width="50" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="y76-1F-KzU"/>
                                     <constraint firstAttribute="width" constant="50" id="yuX-XT-3eJ"/>
                                 </constraints>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addBookButton:" destination="Y8g-eQ-pp8" eventType="touchUpInside" id="fqB-7l-Pjr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69u-Ci-BxC">
+                                <rect key="frame" x="162" y="359" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="WZp-iB-vix"/>
+                                    <constraint firstAttribute="width" constant="50" id="dPc-zT-Eh8"/>
+                                </constraints>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addBookButton:" destination="Y8g-eQ-pp8" eventType="touchUpInside" id="SHe-HW-ca7"/>
+                                    <action selector="deleteAction:" destination="Y8g-eQ-pp8" eventType="touchUpInside" id="PNk-n3-J4T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,8 +103,10 @@
                             <constraint firstItem="Grd-zB-jGM" firstAttribute="top" secondItem="7zI-cO-aoR" secondAttribute="bottom" constant="25" id="HsT-5d-p2q"/>
                             <constraint firstItem="9Nj-L2-o0g" firstAttribute="centerX" secondItem="RMO-01-xO3" secondAttribute="centerX" id="Lbe-PE-Uol"/>
                             <constraint firstItem="7zI-cO-aoR" firstAttribute="centerX" secondItem="RMO-01-xO3" secondAttribute="centerX" id="Xns-12-Nn7"/>
+                            <constraint firstItem="69u-Ci-BxC" firstAttribute="centerX" secondItem="RMO-01-xO3" secondAttribute="centerX" id="Yk6-Kd-cTi"/>
                             <constraint firstItem="7zI-cO-aoR" firstAttribute="top" secondItem="asn-vb-DB9" secondAttribute="top" constant="20" id="oF3-eZ-y0Z"/>
                             <constraint firstItem="Grd-zB-jGM" firstAttribute="centerX" secondItem="RMO-01-xO3" secondAttribute="centerX" id="pjc-Tf-b05"/>
+                            <constraint firstItem="69u-Ci-BxC" firstAttribute="top" secondItem="9Nj-L2-o0g" secondAttribute="bottom" constant="20" id="y8h-Gl-mDl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="asn-vb-DB9"/>
                     </view>
@@ -110,7 +125,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="9Nj-L2-o0g" id="gDj-zl-6Ji"/>
                         <outlet property="bookImageView" destination="7zI-cO-aoR" id="cj4-hp-Nl9"/>
+                        <outlet property="deleteBookButton" destination="69u-Ci-BxC" id="pLx-l4-iDD"/>
                         <outlet property="titleTextField" destination="Grd-zB-jGM" id="kRa-4I-Oac"/>
                     </connections>
                 </viewController>
